@@ -1,0 +1,116 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[russian,english]{babel}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[left=2.6cm,right=2.3cm,top=2.5cm,bottom=2cm]{geometry}
+
+\fancyhead{}
+\fancyhead[lo]{
+	\textsf{\small\textbf{2.594}}
+	\vspace{5pt}
+	\hrule height 1pt
+	\vskip 2.5pt \hrule height 1pt
+}
+\fancyhead[co]{
+	\textsf{\small\textbf{\quad Эллиптические и псевдоэллиптические интегралы}}
+	\vskip 5pt
+}
+\fancyhead[ro]{
+	\textsf{\small\textbf{203}}
+	\vskip 5pt
+}
+\renewcommand\headrulewidth{0pt}
+\pagestyle{fancy}
+\fancyfoot{}
+
+\setlength{\jot}{-1pt}
+
+\setlist{leftmargin=37pt,labelsep=10pt, parsep=2pt}
+\setlist[enumerate]{align=left}
+\headsep = 21pt
+\makeatletter 
+\newcommand{\vast}{\bBigg@{3}}
+\begin{document}
+\begin{enumerate}
+	\setcounter{enumi}{3}
+	\item
+		$
+			P_{-1} = \displaystyle\int \frac{dx}{(a + \sin^2x) \Delta} = \frac1a \Pi \left(x, \frac1a, k\right)
+		$\\[3pt]
+		При $a = 0$
+	\item
+		$
+			\displaystyle\int \frac{dx}{\sin^2x\Delta}
+		$
+		\hfill\llap{(см. {\bf 2.584} 70) \qquad\qquad\qquad \small{\bf Жр (124)а}}
+	\item 
+		$
+			T_n = \displaystyle\int \frac{dx}{(h + g \sin^2x)^n\Delta}
+		$\\[5.5pt]
+		вычисляется при помощи реккурентной формулы\\[-7pt]
+		
+		\qquad $
+		\begin{aligned}
+			T_{n-3} = & \frac1{(2n - 5)k^2} \left\{ {\frac{-g^2\sin x \cos x \Delta}{(h + g\sin^2 x)^{n-1}} + 2(n-2)\left[ g(1 + k^2) + 3hk^2\right]T_{n-2} - }\right.\\[11pt]
+			& - \biggl.(2n-3)\left[ g^2 +2hg(1 + k^2) + 3h^2k^2\right] T_{n-1} + 2(n-1)h(g + h)(g + hk^2)T_n \biggr\}
+		\end{aligned}
+	$
+\end{enumerate}
+\vspace{-0.3em}
+\hspace{-0.2em}
+\textbf{2.593}
+\vspace{-0.5em}
+\begin{enumerate}
+	\item
+		$
+			Q_n = \displaystyle\int \frac{(b + \cos^2x)^n}\Delta dx
+		$\\[6pt]
+		Рекуррентная формула\\[-8pt]
+		
+		\qquad\quad $
+		\begin{aligned}
+			Q_{n+2} = & \frac1{(2n + 3)k^2} \Biggl\{ (b + \cos^2x)^n \sin x \sin x \Delta - (2n + 2)(1 - 2k^2 -3bk^2) Q_{n+1} + \\[10pt]
+			& \quad + (2n + 1) \left[ k'^2 + 2b(k'^2 - k^2) - 3b^2k^2 \right] n \_ 2nb(1 - b)(k'^2 - k^2b) Q_{n-1} \Biggr\}
+		\end{aligned}
+		$\\[12pt]
+		сводит этот интеграл при n целом к интегралам
+	\item
+		$Q_1$
+		\hfill\llap{(см. {\bf 2.584} 1 и {\bf 2.584} 6) \hspace{24mm}}
+	\item 
+		$Q_0$
+		\hfill\llap{(см. {\bf 2.584} 1) \hspace{40.5mm}}
+	\item 
+		$
+			Q_{-1} = \displaystyle\int \frac{dx}{(b + \cos^2 x)\Delta} = \frac1{b + 1}\Pi\left(x, -\frac1{b + 1}, k\right)
+		$\\
+		При $b = 0$
+	\item 
+		$
+			\displaystyle\int \frac{dx}{\cos^2x\Delta}
+		$
+		\hfill\llap{(см. {\bf 2.584} 72) \hspace{21mm} \small{\bf Жр (123)}}
+\end{enumerate}
+\vspace{-0.3em}
+\hspace{-0.2em}
+\textbf{2.594}
+\vspace{-0.5em}
+\begin{enumerate}
+	\item 
+		$
+			R_n = \displaystyle\int \frac{(c + \tg^2x)^n dx}\Delta
+		$\\[3pt]
+		Рекуррентная формула\\[-1.2pt]
+		
+		\hspace{9mm}$
+			\begin{aligned}
+				R_{n+2} = & \frac1{(2n + 3)k'^2} \,\vast\{ { \frac{(c + \tg^2x)^n\tg x \Delta}{\cos^2x} - (2n + 2) \Bigl( 1 + k'^2 - 3ck'^2 \Bigr) R_{n+1} + }\\[6pt]
+				& \quad + (2n - 1)\,\Bigl[ 1 - 2c \, \Bigl( 1 + k^2 \Bigr) + 3c^2k'^2 \Bigr]\, R_n + 2nc(1 - c)\, \Bigl( 1 - k'^2c \Bigr) R_{n-1} \vast\}
+			\end{aligned}
+		$
+\end{enumerate}
+\end{document}

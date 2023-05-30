@@ -1,0 +1,104 @@
+\documentclass[a5paper]{article}
+\usepackage[9pt]{extsizes}
+
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{floatflt}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[russian,english]{babel}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[left=1.75cm,right=1.75cm,top=2cm,bottom=2cm]{geometry}
+
+\fancyhead{}
+\fancyhead[lo]{
+	{\bf 63} {\small \bf ]}
+	\vskip 5pt
+}
+\fancyhead[co]{
+	{\footnotesize {\scriptsize\S 5. ПРИЛОЖЕНИЕ К ИЗУЧЕНИЮ ФУНКЦИЙ}}
+	\vskip 5pt
+}
+\fancyhead[ro]{
+	153
+	\vskip 5pt
+}
+\renewcommand\headrulewidth{0pt}
+\pagestyle{fancy}
+\fancyfoot{}
+\headsep = 4pt
+\setlength{\parindent}{0.6cm}
+\begin{document}
+	Заменяя в числителе этой дроби 0 единицей, а в знаменателе нулем, увеличим дробь и можем поэтому сказать, что ошибка вычисленного значе\-ния $\log_{10} 101$ меньше
+	\vspace{-2.5mm}
+	\begin{center}
+		{\large $\frac{M}{100^2}$}\;\;\;\begin{rotate}{90}$\parallel$\end{rotate}\;\;{\large$0,00004$} $\dots$
+	\end{center}
+
+	Перепишем формулу Лагранжа в виде:
+	\begin{center}
+		{\large $\frac{f(b)\:\text{—}\:f(a)}{b\:\text{—}\:a}$}\;\;\;\begin{rotate}{90}$\parallel$\end{rotate}\;\;{\large $f'(c) \qquad\quad$ ($a\:${\huge <}$\:c\:${\huge <}$\:b$).}
+	\end{center}
+	\vspace{2mm}
+
+	Обращаясь к графику функции \quad$y$\;\;\;\:\begin{rotate}{90}$\parallel$\end{rotate}\;\;$f(x)$\quad (рис. 71), заметим, что отношение
+	\begin{center}
+		{\large $\frac{f(b)\:\text{—}\:f(a)}{b\:\text{—}\:a}$}\;\;\;\begin{rotate}{90}$\parallel$\end{rotate}\;\;{\large$\frac{\overline{CB}}{\overline{AC}}$}\;\;\;\begin{rotate}{90}$\parallel$\end{rotate}\;\;{\large $\tg\angle\; CAB$}
+	\end{center}
+	\vspace{3mm}
+	дает угловой коэффициент хорды $AB$, а $f'(c)$ дает угловой коэф-\linebreak фициент касательной в некоторой точке $M$ дуги $AB$ кривой. Таким\linebreak
+	\begin{floatingfigure}{50mm}
+		\begin{tikzpicture}[xscale=0.9, yscale=0.9]
+			\draw[thin, ->] (0.4, 0) -- (0.4, 2.7);
+			\draw[thin, ->] (0.2, 0.2) -- (4.2, 0.2);
+			\draw[very thick] (1, 1) to [out=60, in=180] (3.3, 2.5);
+			\draw[thick] (1, 1) -- (3.3, 2.5);
+			\draw[thin, dashed] (1, 0.2) -- node[right=0.5pt, midway,sloped,above] {\small $f(a)$} (1, 1);
+			\draw[thin, dashed] (3.3, 0.2) -- node[right=0.5pt, midway,sloped,below] {\small \qquad$f(b)-f(a)$} (3.3, 2.5);
+			\draw[thin, dashed] (1, 1) -- (3.3, 1);
+			\node at (0.1, 2.6) {\small\textit{У}};
+			\node at (4.4, 0.2) {\small\textit{X}};
+			\node at (0.2, 0) {\small\textit{0}};
+			\draw[thin] (1, 1.45) -- (3, 2.85);
+			\draw[thin, dashed] (2, 2.2) -- (2, 0.2);
+			\filldraw[color=black, fill=white, thin] (1, 1) circle (0.04cm);
+			\filldraw[color=black, fill=white, thin] (3.3, 2.5) circle (0.04cm);
+			\filldraw[color=black, fill=white, thin] (3.3, 1) circle (0.04cm);
+			\filldraw[color=black, fill=white, thin] (2, 2.15) circle (0.04cm);
+			\node at (0.8, 1.1) {\small\textit{A}};
+			\node at (3.45, 2.6) {\small\textit{B}};
+			\node at (3.45, 0.8) {\small\textit{C}};
+			\node at (2, 2.5) {\small\textit{M}};
+			\node at (2.5, 2.7) {\small\textit{T}};
+			\node at (1.2, 0.4) {\small\textit{a}};
+			\node at (2.2, 0.4) {\small\textit{c}};
+			\node at (3.5, 0.4) {\small\textit{b}};
+		\end{tikzpicture}
+		\vspace{-4mm}
+		\captionsetup{labelformat=empty}
+		\caption{\qquad\quad {\small Рис. 71.}}
+		\parbox[b][0.05cm][t]{27mm}{}
+	\end{floatingfigure}
+	\vspace{-3.8mm}
+	\noindent
+	образом, формула Лагранжа равносильна следующему\;\;утверждению:\;\;{\it на\;\;дуге\;\;кри\-вой\;\;\;имеется\;\;такая\;\;точка,\;\;в\;\;которой касательная параллельна хорде.} Частным случаем этого\;\;утверждения,\;когда\;\;хорда параллельна\;\;\;оси\;\;\;$OX$,\;\;\;т.е.\;\;\;$f(a)$\;\;\;\begin{rotate}{90}$\parallel$\end{rotate}\;\;$f(b)$, является теорема Ролля.\\
+	\indent З\,а\,м\,е\,ч\,а\,н\,и\,е. Из формулы Лагранжа непосредственно\;\;\;вытекают\;\;те\;\;признаки возрастания\;\;и\;\;убывания,\;\;которые\;\;были установлены нами выше из чертежа. Действительно, положим, что внутри некоторого промежутка первая производная $ f'(x)$ положи-\linebreak тельна и пусть $x$ и $x$\:{\Large+}\:$h$\;\text{—}\;две точки из этого промежутка. Из фор-\linebreak мулы Лагранжа:
+	\vspace{-1.5mm}
+	\begin{center}
+		{\large$f(x$\:{\Large+}\:$h)\:\text{—}\:f(x)$}\;\;\;\begin{rotate}{90}$\parallel$\end{rotate}\;\;{\large$hf'(x\:{\Large+}\:\theta h)$} \hspace{1.2cm} ($0\:${\huge <}$\:\theta\:${\huge <}$\:1$)
+	\end{center}
+
+	\noindent
+	видно, что при положительных $h$ разность, стоящая слева, будет вели-\linebreak чиной положительной, так как оба множителя в произведении, стоя-\linebreak щем справа, в этом случае положительны. Таким образом, предполагая положительность производной\quad в\quad некотором промежутке,\;\;\;мы\;\;\;получили
+	\begin{center}
+		{\large$f(x$\:{\LARGE+}\:$h)\:\text{—}\:f(x)$ {\huge>} $0$},
+	\end{center}
+	т. е. функция возрастает в этом промежутке. Точно так же из напи-\linebreak санной\;\;\;выше\;\;\;формулы\;\;\;непосредственно\;\;\;вытекает и признак убывания.
+	
+	Заметим здесь же, что рассуждения, приведенные нами при дока-\linebreak зательстве теореме Ферма, остаются вполне применимыми и для того\linebreak случая, когда в рассматриваемой точке функция достигает не обяза-\linebreak тельно наибольшего или наименьшего значения, а только лишь макси-\linebreak мума или минимума. Эти рассуждения докажут, что в таких точках\linebreak первая\;\;\;производная\;\;\;должна\;\;\;быть\;\;\;равна\;\;\;нулю,\;\;\;если она существует.
+\end{document}
